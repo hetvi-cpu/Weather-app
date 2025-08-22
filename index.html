@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="weather-app.png" alt="app-logo">
+                <span style="font-size:11px;padding:10px;"> Weather.com</span>
+            </div>
+            <div class="nav-items">
+                <div class="nav-item active">
+                    <svg viewBox="0 0 24 24" class="weather-icon">
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Weather</span>
+                </div>
+                <div class="nav-item">
+                    <svg viewBox="0 0 24 24" class="cities-icon">
+                        <path d="M3 3h18v18H3z M8 3v18 M16 3v18 M3 8h18 M3 16h18" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Cities</span>
+                </div>
+                <div class="nav-item">
+                    <svg viewBox="0 0 24 24" class="map-icon">
+                        <path d="M3 6l6-3l6 3l6-3v15l-6 3l-6-3l-6 3V6z M9 3v15 M15 6v15" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Map</span>
+                </div>
+                <div class="nav-item">
+                    <svg viewBox="0 0 24 24" class="settings-icon">
+                        <path d="M12 15a3 3 0 1 0 0-6a3 3 0 0 0 0 6z" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33a1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Settings</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for cities" id="city" value="Ahmedabad">
+                <button id="search-btn">Search</button>
+            </div>
+
+            <div class="current-weather">
+                <div class="weather-info">
+                    <h1 id="result"></h1>
+                    <p></p>
+
+                    <div class="temperature" id="temp">-</div>
+                </div>
+                <div class="weather-icon">
+                    <div class="icon"></div>
+                </div>
+            </div>
+
+            <div class="hourly-forecast">
+                <h2>24-HOUR FORECAST</h2>
+               <div class="forecast-grid">
+                    
+                </div>
+            </div>
+
+            <div class="air-conditions">
+                <div class="conditions-header">
+                    <h2>AIR CONDITIONS</h2>
+                    <a href="see-more.html"><button class="see-more">See More</button></a>
+                </div>
+                <div class="conditions-grid">
+                    <div class="condition-item">
+                        <h4 class="label">Real Feel</h4>
+                        <span class="value">30°</span>
+                    </div>
+                    <div class="condition-item">
+                        <h4 class="label">Wind</h4>
+                        <span class="value">0</span>
+                        
+                    </div>
+                    <div class="condition-item">
+                        <h4 class="label">Pressure</h4>
+                        <span class="value">0</span>
+                    </div>
+                    <div class="condition-item">
+                        <h4 class="label">Humidity</h4>
+                        <span class="value">0</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="forecast-sidebar">
+            <h2>5-DAY FORECAST</h2>
+            <div class="weekly-forecast">
+            </div>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
